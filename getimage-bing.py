@@ -37,7 +37,7 @@ def create_imgdir():
 
 
 # 画像検索結果(URL)を取得する
-#  @param string 画像検索時のオフセット値 (0 の場合は一番初めの検索結果を返す)
+#  @param integer 画像検索時のオフセット値 (0 の場合は一番初めの検索結果を返す)
 #  @return array 画像検索結果URL一覧
 def search_img(offset_cnt):
     # Bing 画像検索実行
