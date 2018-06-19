@@ -23,7 +23,6 @@ if img_total_cnt > img_onetime_maxcnt:    # 1 接続あたりの取得枚数を�
     img_cnt = img_onetime_maxcnt
 else:
     img_cnt = img_total_cnt
-request_headers = {"Ocp-Apim-Subscription-Key": subscription_key}
 
 # -------------------------------------------------------------------------------
 # functions
@@ -48,6 +47,7 @@ def search_img(offset_cnt):
         "offset=" + str(offset_cnt) + "&" + \
         "imageType=photo" + "&" + \
         "mkt=ja-JP"
+    request_headers = {"Ocp-Apim-Subscription-Key": subscription_key}
     conn.request("GET", search_url, headers=request_headers)
 
     response = conn.getresponse()
